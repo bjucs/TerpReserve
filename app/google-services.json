@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "867651127713",
+    "project_id": "terpreserve",
+    "storage_bucket": "terpreserve.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867651127713:android:91c2c94f71dd5d9a48e3e0",
+        "android_client_info": {
+          "package_name": "com.groupproject.terpreserve"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrfVMQJggUnmte1JBo6Y4POjMRsOXeKuM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
