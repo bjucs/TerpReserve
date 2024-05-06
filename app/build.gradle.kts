@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.groupprojects.terpreserve"
+    namespace = "com.groupproject.terpreserve"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.groupprojects.terpreserve"
+        applicationId = "com.groupproject.terpreserve"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
