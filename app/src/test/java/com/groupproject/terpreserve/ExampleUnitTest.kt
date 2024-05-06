@@ -1,4 +1,4 @@
-package com.groupprojects.terpreserve
+package com.groupproject.terpreserve
 
 import org.junit.Test
 
