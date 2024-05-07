@@ -12,7 +12,12 @@
           "package_name": "com.groupproject.terpreserve"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1:867651127713:android:91c2c94f71dd5d9a48e3e0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDrfVMQJggUnmte1JBo6Y4POjMRsOXeKuM"
