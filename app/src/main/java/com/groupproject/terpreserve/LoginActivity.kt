@@ -1,7 +1,8 @@
 package com.groupproject.terpreserve
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
@@ -16,6 +17,7 @@ class LoginActivity : AppCompatActivity() {
     ) { res -> onSignInResult(res) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
@@ -28,11 +30,7 @@ class LoginActivity : AppCompatActivity() {
     private fun startSignIn() {
         // Choose authentication providers
         val providers = arrayListOf(
-            AuthUI.IdpConfig.EmailBuilder().build(),
-            AuthUI.IdpConfig.PhoneBuilder().build(),
-            AuthUI.IdpConfig.GoogleBuilder().build(),
-            AuthUI.IdpConfig.FacebookBuilder().build(),
-            AuthUI.IdpConfig.TwitterBuilder().build()
+            AuthUI.IdpConfig.GoogleBuilder().build()
         )
 
         // Create and launch sign-in intent
@@ -44,25 +42,20 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
-        val response = result.idpResponse
         if (result.resultCode == RESULT_OK) {
             // Successfully signed in
-            val user = FirebaseAuth.getInstance().currentUser
-            // Proceed to the next part of your app
+            val mainIntent = Intent(this, MainActivity::class.java)
+            startActivity(mainIntent)
+            finish()  // Finish LoginActivity so user can't return to it with the back button
         } else {
             // Sign in failed
-            if (response == null) {
+            if (result.idpResponse == null) {
                 // User pressed back button
-                showSnackbar("Sign-in cancelled")
+                finish()  // Optionally finish LoginActivity returning to MainActivity or exit
             } else {
-                response.error?.let {
-                    showSnackbar("Error: ${it.errorCode}")
-                }
+                // Handle errors
+                // e.g., show an error message
             }
         }
-    }
-
-    private fun showSnackbar(message: String) {
-        // Implement a function to show a Snackbar with the message
     }
 }

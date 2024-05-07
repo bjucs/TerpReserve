@@ -50,6 +50,4 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.android.gms:play-services-auth:19.0.0")
     implementation("com.firebaseui:firebase-ui-auth:8.0.0")
-
-
 }
