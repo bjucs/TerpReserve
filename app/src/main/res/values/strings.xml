@@ -6,4 +6,9 @@
     <string name="save_login_info">save login info</string>
     <string name="create_account">create account</string>
     <string name="email">email</string>
+    <string name="loc1">McKeldin Library</string>
+    <string name="loc2">Washington Quad</string>
+    <string name="loc3">Van Munching</string>
+    <string name="reserve">Reserve</string>
+    <string name="account">Account</string>
 </resources>

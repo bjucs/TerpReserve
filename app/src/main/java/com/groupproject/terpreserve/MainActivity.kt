@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity() {
             finish()  // Finish MainActivity so user can't return to it with the back button
         } else {
             // Transition to reservation page
+            val locationsIntent = Intent(this, LocationsActivity::class.java)
+            startActivity(locationsIntent)
+            finish()
         }
     }
 }
