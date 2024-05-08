@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "867651127713",
+    "firebase_url": "https://terpreserve-default-rtdb.firebaseio.com",
     "project_id": "terpreserve",
     "storage_bucket": "terpreserve.appspot.com"
   },
@@ -14,7 +15,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "1:867651127713:android:91c2c94f71dd5d9a48e3e0.apps.googleusercontent.com",
+          "client_id": "867651127713-dlku82ncnphpk4gil2953515emohqoe1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.groupproject.terpreserve",
+            "certificate_hash": "c6084eea7fd0cf6573931513481c03fd6628c172"
+          }
+        },
+        {
+          "client_id": "867651127713-5jp6u2v6ukt8l2al6apppvnhgnmrrdh7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -25,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867651127713-5jp6u2v6ukt8l2al6apppvnhgnmrrdh7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
