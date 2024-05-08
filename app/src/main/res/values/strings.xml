@@ -11,4 +11,5 @@
     <string name="loc3">Van Munching</string>
     <string name="reserve">Reserve</string>
     <string name="account">Account</string>
+    <string name="default_web_client_id" translatable="false">867651127713-5jp6u2v6ukt8l2al6apppvnhgnmrrdh7.apps.googleusercontent.com</string>
 </resources>
