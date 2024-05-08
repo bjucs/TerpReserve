@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         if (!loggedIn) {
             val loginIntent = Intent(this, LoginActivity::class.java)
             startActivity(loginIntent)
-            finish()  // Finish MainActivity so user can't return to it with the back button
+            finish()
         } else {
             // Transition to reservation page
             val locationsIntent = Intent(this, LocationsActivity::class.java)

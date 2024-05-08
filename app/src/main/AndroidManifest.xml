@@ -30,6 +30,10 @@
             android:name=".UserProfileActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".LocationsActivity"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>
