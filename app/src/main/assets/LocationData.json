@@ -1,0 +1,25 @@
+{
+  "locations": {
+    "location1": {
+      "name": "McKeldin Library",
+      "dates": {
+        "05-09-2024": ["9:00 AM", "11:00 AM"],
+        "05-10-2024": ["10:00 AM", "1:00 PM"]
+      }
+    },
+    "location2": {
+      "name": "Washington Quad",
+      "dates": {
+        "05-09-2024": ["12:00 PM", "3:00 PM"],
+        "05-10-2024": ["9:00 AM", "12:00 PM"]
+      }
+    },
+    "location3": {
+      "name": "Van Munching",
+      "dates": {
+        "05-09-2024": ["1:00 PM", "3:00 PM"],
+        "05-10-2024": ["10:00 AM", "12:00 PM"]
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AvailableLocationsActivity">
+    tools:context=".LocationsActivity">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -16,32 +16,93 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="75dp">
 
-            <!-- Sample Location Entry -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="40dp">
 
                 <TextView
-                    android:id="@+id/locationName"
+                    android:id="@+id/locationName1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Location Name"
+                    android:text="@string/loc1"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                 <Spinner
-                    android:id="@+id/dateSpinner"
+                    android:id="@+id/dateSpinner1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/locationName" />
+                    android:layout_below="@id/locationName1"
+                    android:minHeight="48dp"
+                    android:padding="8dp"/>
 
                 <Spinner
-                    android:id="@+id/timeSpinner"
+                    android:id="@+id/timeSpinner1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/dateSpinner" />
+                    android:layout_below="@id/dateSpinner1"
+                    android:minHeight="48dp"
+                    android:padding="8dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp">
+
+                <TextView
+                    android:id="@+id/locationName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loc2"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <Spinner
+                    android:id="@+id/dateSpinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/locationName2"
+                    android:minHeight="48dp"
+                    android:padding="8dp"/>
+
+                <Spinner
+                    android:id="@+id/timeSpinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dateSpinner2"
+                    android:minHeight="48dp"
+                    android:padding="8dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp">
+
+                <TextView
+                    android:id="@+id/locationName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loc3"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <Spinner
+                    android:id="@+id/dateSpinner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/locationName3"
+                    android:minHeight="48dp"
+                    android:padding="8dp"/>
+
+                <Spinner
+                    android:id="@+id/timeSpinner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dateSpinner3"
+                    android:minHeight="48dp"
+                    android:padding="8dp"/>
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
@@ -58,13 +119,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Reserve" />
+            android:text="@string/reserve"
+            style="@style/Widget.MaterialComponents.Button.TextButton" />
 
         <Button
             android:id="@+id/accountButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Account" />
+            android:text="@string/account"
+            style="@style/Widget.MaterialComponents.Button.TextButton" />
+
     </LinearLayout>
 </RelativeLayout>
