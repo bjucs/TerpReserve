@@ -1,13 +1,15 @@
 package com.groupproject.terpreserve
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.CheckBox
 import androidx.appcompat.app.AppCompatActivity
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
-import com.google.firebase.auth.FirebaseAuth
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -15,15 +17,32 @@ class LoginActivity : AppCompatActivity() {
     private val signInLauncher = registerForActivityResult(
         FirebaseAuthUIActivityResultContract()
     ) { res -> onSignInResult(res) }
+    private lateinit var sharedPreferences : SharedPreferences
+
+    companion object {
+        private const val TAG = "LoginActivity"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-        // Example trigger to start the sign-in flow
         findViewById<Button>(R.id.loginButton).setOnClickListener {
+            Log.w(TAG, "Logging in")
             startSignIn()
+        }
+
+        findViewById<CheckBox>(R.id.saveLoginCheckBox).setOnCheckedChangeListener { _, isChecked ->
+            val editor = sharedPreferences.edit()
+            if (isChecked) {
+                editor.putBoolean("StayLoggedIn", true)
+            }
+            else {
+                editor.putBoolean("StayLoggedIn", false)
+            }
+            editor.apply()
         }
     }
 
@@ -46,7 +65,17 @@ class LoginActivity : AppCompatActivity() {
             // Successfully signed in
             val mainIntent = Intent(this, MainActivity::class.java)
             startActivity(mainIntent)
-            finish()  // Finish LoginActivity so user can't return to it with the back button
+
+            // Remain signed upon successful login if the box was checked
+            val editor = sharedPreferences.edit()
+            if (sharedPreferences.getBoolean("StayLoggedIn", false)) {
+                editor.putBoolean("LoggedIn", true)
+                editor.apply()
+            }
+
+            // Transition to reservation page
+
+            finish()
         } else {
             // Sign in failed
             if (result.idpResponse == null) {

@@ -2,7 +2,7 @@
     <string name="app_name">TerpReserve</string>
     <string name="username">username</string>
     <string name="password">password</string>
-    <string name="login" />
+    <string name="login"> Login with Google </string>
     <string name="save_login_info">save login info</string>
     <string name="create_account">create account</string>
     <string name="email">email</string>
