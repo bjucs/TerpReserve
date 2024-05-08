@@ -62,10 +62,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
         if (result.resultCode == RESULT_OK) {
-            // Successfully signed in
-            val mainIntent = Intent(this, MainActivity::class.java)
-            startActivity(mainIntent)
-
+            Log.w(TAG, "Logged in successfully!")
             // Remain signed upon successful login if the box was checked
             val editor = sharedPreferences.edit()
             if (sharedPreferences.getBoolean("StayLoggedIn", false)) {
@@ -73,9 +70,11 @@ class LoginActivity : AppCompatActivity() {
                 editor.apply()
             }
 
-            // Transition to reservation page
+            // Switch to reservation page
+//            val profileIntent = Intent(this, UserProfileActivity::class.java)
+//            startActivity(profileIntent)
+//            finish()
 
-            finish()
         } else {
             // Sign in failed
             if (result.idpResponse == null) {
