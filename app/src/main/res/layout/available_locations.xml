@@ -16,8 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="75dp">
+            android:padding="50dp">
 
+            <!-- Location Block 1 -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,8 +46,20 @@
                     android:layout_below="@id/dateSpinner1"
                     android:minHeight="48dp"
                     android:padding="8dp"/>
+
+                <Button
+                    android:id="@+id/reserveButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/timeSpinner1"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/reserve"
+                    android:padding="10dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
             </RelativeLayout>
 
+            <!-- Location Block 2 -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,8 +87,20 @@
                     android:layout_below="@id/dateSpinner2"
                     android:minHeight="48dp"
                     android:padding="8dp"/>
+
+                <Button
+                    android:id="@+id/reserveButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/timeSpinner2"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/reserve"
+                    android:padding="10dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
             </RelativeLayout>
 
+            <!-- Location Block 1 -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -103,7 +128,19 @@
                     android:layout_below="@id/dateSpinner3"
                     android:minHeight="48dp"
                     android:padding="8dp"/>
+
+                <Button
+                    android:id="@+id/reserveButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/timeSpinner3"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/reserve"
+                    android:padding="10dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
             </RelativeLayout>
+
         </LinearLayout>
     </ScrollView>
 
@@ -119,7 +156,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/reserve"
+            android:text="@string/make_reservation"
             style="@style/Widget.MaterialComponents.Button.TextButton" />
 
         <Button
