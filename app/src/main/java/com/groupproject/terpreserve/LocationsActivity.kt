@@ -25,7 +25,7 @@ class LocationsActivity : AppCompatActivity() {
         timeSpinner = findViewById(R.id.timeSpinner1)
         timeSpinner.isEnabled = false  // Disable timeSpinner initially
 
-        val locationKey = "yourLocationKey" // This should be the identifier for the location
+        val locationKey = "location1" // This should be the identifier for the location
         loadLocationData(locationKey)
     }
 

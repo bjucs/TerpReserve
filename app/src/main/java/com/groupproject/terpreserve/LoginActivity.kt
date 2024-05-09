@@ -71,11 +71,11 @@ class LoginActivity : AppCompatActivity() {
             }
 
             // Switch to reservation page
-            val profileIntent = Intent(this, UserProfileActivity::class.java)
-            startActivity(profileIntent)
+            val locationsIntent = Intent(this, LocationsActivity::class.java)
+            startActivity(locationsIntent)
             finish()
-
-        } else {
+        }
+        else {
             // Sign in failed
             if (result.idpResponse == null) {
                 // User pressed back button
