@@ -71,9 +71,9 @@ class LoginActivity : AppCompatActivity() {
             }
 
             // Switch to reservation page
-//            val profileIntent = Intent(this, UserProfileActivity::class.java)
-//            startActivity(profileIntent)
-//            finish()
+            val profileIntent = Intent(this, UserProfileActivity::class.java)
+            startActivity(profileIntent)
+            finish()
 
         } else {
             // Sign in failed
