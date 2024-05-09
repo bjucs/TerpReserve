@@ -1,10 +1,12 @@
 package com.groupproject.terpreserve
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.DataSnapshot
@@ -28,6 +30,12 @@ class LocationsActivity : AppCompatActivity() {
         val locationKeys = listOf("location1", "location2", "location3")
         for (locationKey in locationKeys) {
             loadLocationData(locationKey)
+        }
+
+        findViewById<Button>(R.id.accountButton).setOnClickListener {
+            val profileIntent = Intent(this, UserProfileActivity::class.java)
+            startActivity(profileIntent)
+            finish()
         }
     }
 
