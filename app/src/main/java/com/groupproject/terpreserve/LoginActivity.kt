@@ -63,12 +63,18 @@ class LoginActivity : AppCompatActivity() {
     private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
         if (result.resultCode == RESULT_OK) {
             Log.w(TAG, "Logged in successfully!")
+
+            val userId = result.idpResponse?.email
+
             // Remain signed upon successful login if the box was checked
             val editor = sharedPreferences.edit()
             if (sharedPreferences.getBoolean("StayLoggedIn", false)) {
                 editor.putBoolean("LoggedIn", true)
                 editor.apply()
             }
+
+            editor.putString("Email", userId)
+            editor.apply()
 
             // Switch to reservation page
             val locationsIntent = Intent(this, LocationsActivity::class.java)
