@@ -93,6 +93,7 @@ class LocationsActivity : AppCompatActivity() {
             val selectedDate = dateSpinners[index].selectedItem as String
             val selectedTime = timeSpinners[index].selectedItem as String
             deleteReservation(locationKeys[index], selectedDate, selectedTime)
+            addReservationToUser(locationKeys[index], selectedDate, selectedTime)
         }
     }
 
@@ -126,6 +127,21 @@ class LocationsActivity : AppCompatActivity() {
                 Log.d("LocationActivity", "Database error: $databaseError")
             }
         })
+    }
+
+    private fun addReservationToUser(locationKey: String, selectedDate: String, selectedTime: String) {
+        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+        val emailKey = sharedPreferences.getString("Email", null)
+        val combinedReservationKey = selectedDate + selectedTime + locationKey
+
+        val pathPrefix = "users/$emailKey/reservations/$combinedReservationKey"
+
+        var databaseRef = FirebaseDatabase.getInstance().getReference("$pathPrefix/location")
+        databaseRef.setValue(locationKey)
+        databaseRef = FirebaseDatabase.getInstance().getReference("$pathPrefix/date")
+        databaseRef.setValue(selectedDate)
+        databaseRef = FirebaseDatabase.getInstance().getReference("$pathPrefix/time")
+        databaseRef.setValue(selectedTime)
     }
 }
 

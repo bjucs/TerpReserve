@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "867651127713-av7jvu1as8vosrmd8es2mug8pviopqt6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.groupproject.terpreserve",
+            "certificate_hash": "a6bfaeca7a0b4b5fa09bdd8612f169d1f41b0cce"
+          }
+        },
+        {
           "client_id": "867651127713-dlku82ncnphpk4gil2953515emohqoe1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

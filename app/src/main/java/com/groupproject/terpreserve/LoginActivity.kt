@@ -64,7 +64,9 @@ class LoginActivity : AppCompatActivity() {
         if (result.resultCode == RESULT_OK) {
             Log.w(TAG, "Logged in successfully!")
 
-            val userId = result.idpResponse?.email
+            var userId = result.idpResponse?.email
+            // Firebase doesn't allow . as keys, so we convert to _ to query in DB
+            userId = userId!!.replace('.', '_')
 
             // Remain signed upon successful login if the box was checked
             val editor = sharedPreferences.edit()
