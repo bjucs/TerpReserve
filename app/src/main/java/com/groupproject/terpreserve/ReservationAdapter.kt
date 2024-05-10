@@ -1,5 +1,6 @@
 package com.groupproject.terpreserve
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.TextView
 class ReservationAdapter(context: Context, reservations: List<Reservation>)
     : ArrayAdapter<Reservation>(context, 0, reservations) {
 
+    @SuppressLint("SetTextI18n")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.reservation_item, parent, false)
         val reservation = getItem(position)
