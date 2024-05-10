@@ -2,8 +2,15 @@
     <string name="app_name">TerpReserve</string>
     <string name="username">username</string>
     <string name="password">password</string>
-    <string name="login" />
+    <string name="login"> Login with Google </string>
     <string name="save_login_info">save login info</string>
     <string name="create_account">create account</string>
     <string name="email">email</string>
+    <string name="loc1">McKeldin Library</string>
+    <string name="loc2">Washington Quad</string>
+    <string name="loc3">Van Munching</string>
+    <string name="make_reservation">Make a Reservation</string>
+    <string name="reserve">Reserve</string>
+    <string name="account">Account</string>
+    <string name="default_web_client_id" translatable="false">867651127713-5jp6u2v6ukt8l2al6apppvnhgnmrrdh7.apps.googleusercontent.com</string>
 </resources>

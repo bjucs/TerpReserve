@@ -1,18 +1,28 @@
 package com.groupproject.terpreserve
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.database.FirebaseDatabase
 
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login)
+        setContentView(R.layout.activity_main)
 
-        val database = FirebaseDatabase.getInstance()
-        val myRef = database.getReference("message")
+        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+        val loggedIn = sharedPreferences.getBoolean("LoggedIn", false)
 
-        myRef.setValue("Hello, World!")
+        if (!loggedIn) {
+            val loginIntent = Intent(this, LoginActivity::class.java)
+            startActivity(loginIntent)
+            finish()
+        } else {
+            // Transition to reservation page
+            val locationsIntent = Intent(this, LocationsActivity::class.java)
+            startActivity(locationsIntent)
+            finish()
+        }
     }
 }
