@@ -1,4 +1,7 @@
+# TerpReserve
+
 TerpReserve is an Android app designed to create and manage reservations for times and places on-campus at UMD, created as a student project for CMSC436 (Programming Handheld Devices) by Saahil Singh and Brian Ju. 
+
 It's currently a minimum viable product (MVP) that reads/writes from user-created listing data in Firebase. 
 
 Here's an example of how we add a user reservation to Firebase: 
