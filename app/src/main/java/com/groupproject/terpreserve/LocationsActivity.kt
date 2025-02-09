@@ -16,7 +16,6 @@ import com.google.firebase.database.GenericTypeIndicator
 import com.google.firebase.database.ValueEventListener
 
 class LocationsActivity : AppCompatActivity() {
-    // Declare arrays or lists of spinners and buttons
     private lateinit var dateSpinners: Array<Spinner>
     private lateinit var timeSpinners: Array<Spinner>
     private lateinit var reserveButtons: Array<Button>
@@ -27,7 +26,7 @@ class LocationsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.available_locations)
 
-        // Initialize arrays
+        // Initialize date spinners, time spinners, and reserve buttons
         dateSpinners = arrayOf(
             findViewById(R.id.dateSpinner1),
             findViewById(R.id.dateSpinner2),
